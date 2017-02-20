@@ -1,4 +1,4 @@
-#!/usr/bin/python3.4
+#!/usr/bin/env python3
 
 import requests
 import bs4
@@ -31,7 +31,7 @@ def get_site_content():
     try:
         res.raise_for_status()
     except:
-        # Log data instead of sending to stdout
+        # TODO: Log data instead of sending to stdout
         print('Something went wrong accessing the site')
     else:
         site_file = open(SITE_FILE, 'wb')
